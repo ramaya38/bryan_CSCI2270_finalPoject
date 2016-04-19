@@ -1,0 +1,10 @@
+Water Dungeon
+Earth Dungeon
+Wind Dungeon
+Fire Dungeon
+Death Dungeon
+Life Dungeon
+Shock Dungeon
+Rainbow Dungeon
+Dark Dungeon
+Light Dungeon

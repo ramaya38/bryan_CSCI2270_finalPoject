@@ -1,5 +1,6 @@
 #include <iostream>
 #include <stdlib.h>
+#include "BSMap.h"
 
 using namespace std;
 
@@ -19,6 +20,9 @@ int main()
     {
         start=true;
         //start new character here
+        //set world map
+        //set dungeon layout
+
     }
     else
         cout<<"Game has been turned off! No adventure started!"<<endl;
