@@ -27,5 +27,4 @@ class Creature
         void getHP(monster x);
         void getDef(monster x);
 };
-
 #endif // CREATURE_H
