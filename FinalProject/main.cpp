@@ -1,6 +1,7 @@
 #include <iostream>
 #include <stdlib.h>
 #include "BSMap.h"
+#include "Creature.h"
 
 using namespace std;
 

@@ -1,18 +1,20 @@
 # depslib dependency file v1.0
-1461040660 source:c:\users\tranquil shadow\dropbox\bryan_csci2270_finalpoject\finalproject\main.cpp
+1461125417 source:c:\users\tranquil shadow\dropbox\bryan_csci2270_finalpoject\finalproject\main.cpp
 	<iostream>
 	<stdlib.h>
 	"BSMap.h"
+	"Creature.h"
 
 1461040047 source:c:\users\tranquil shadow\dropbox\bryan_csci2270_finalpoject\finalproject\src\bsmap.cpp
 	"BSMap.h"
 
-1461042148 c:\users\tranquil shadow\dropbox\bryan_csci2270_finalpoject\finalproject\include\bsmap.h
+1461131020 c:\users\tranquil shadow\dropbox\bryan_csci2270_finalpoject\finalproject\include\bsmap.h
 	<iostream>
 
 1461041205 source:c:\users\tranquil shadow\dropbox\bryan_csci2270_finalpoject\finalproject\src\creature.cpp
 	"Creature.h"
 
-1461112762 c:\users\tranquil shadow\dropbox\bryan_csci2270_finalpoject\finalproject\include\creature.h
+1461129902 c:\users\tranquil shadow\dropbox\bryan_csci2270_finalpoject\finalproject\include\creature.h
 	<iostream>
+	<vector>
 
