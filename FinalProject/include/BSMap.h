@@ -11,7 +11,6 @@ struct levels
 struct Dungeon
 {
     bool finished;
-    bool playerHere;
     std::string name;
     std::string descrip;
     int key;
@@ -51,6 +50,7 @@ class BSMap
         monster monRandomizer();//randomly makes monsters
         void monInfo();
         void charInfo();
+        void moveChar();
         BSMap();
         virtual ~BSMap();
     protected:
@@ -60,6 +60,7 @@ class BSMap
         void combat();
         void levelDelete(Dungeon *hold);
         Dungeon *root=NULL;
+        Dungeon *pos=root;
 };
 
 #endif // BSMAP_H

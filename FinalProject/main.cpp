@@ -17,23 +17,17 @@ int main()
 
     getline(cin,response);
     if(response=="1")
-    {
         start=true;
-        //start new character here
-        //set world map
-        //set dungeon layout
-
-    }
     else
         cout<<"Game has been turned off! No adventure started!"<<endl;
 
+    BSMap *world=new BSMap();//start new character here / set world map / set dungeon layout
     while(start)
     {
         cout<<"You are resting. What would you like to do next?"<<endl;
         cout<<"1. Go to a dungeon"<<endl;
         cout<<"2. Look at map"<<endl;
-        cout<<"3. Check inventory"<<endl;
-        cout<<"4. Quit the game"<<endl;
+        cout<<"3. Quit the game"<<endl;
 
         getline(cin,response);
         choice=atoi(response.c_str());
@@ -41,15 +35,12 @@ int main()
         switch(choice)
         {
             case 1:
-                //go to dungeon
+                world->moveChar();
                 break;
             case 2:
-                //look at map
+                world->printMap();
                 break;
             case 3:
-                //check inventory
-                break;
-            case 4:
                 start=false;
                 cout<<"Game has been turned off! Restart program to play again!"<<endl;
                 break;

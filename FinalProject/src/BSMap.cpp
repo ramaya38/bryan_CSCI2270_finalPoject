@@ -20,21 +20,22 @@ void BSMap::createMap()
     home->descrip="This is your families home, but you seek glory elsewhere";
     home->finished=true;
     home->name="Family Home";
-    home->playerHere=true;
     home->key=8;
     home->parent=NULL;
     home->left=NULL;
     home->right=NULL;
+    pos=home;
     setDungeonLevels(true,0,home);
-
+    cout<<home->name<<" "<<home->descrip<<endl;
     for(int i=0;i<DunNum;i++)//Adds amount of dungeons randomly to a BST
     {
         int fileSpot=rand()%12;//chooses a random one from the map
-
+        cout<<"for create map"<<endl;
+        int j=0;
         while(!readFile.eof())
         {
-            int i=0;
-            if(i==fileSpot)
+            cout<<"while create map"<<endl;
+            if(j==fileSpot)
             {
                 string line="";
                 string name="";
@@ -43,10 +44,11 @@ void BSMap::createMap()
                 stringstream ss(line);
                 getline(ss,name,',');
                 getline(ss,descrip,',');
+                cout<<"adding dungeon "<<name<<endl;
                 insertDungeon(root,rand()%16+1,name,descrip);//the root will always be built beforehand
                 break;
             }
-            i++;
+            j++;
         }
     }
 }
@@ -101,6 +103,11 @@ void BSMap::printMap(Dungeon *temp)
     cout<<"Dungeon "<<temp->name <<endl;
     if(temp->right!=NULL)
         printMap(temp->right);
+}
+
+void BSMap::moveChar()
+{
+
 }
 
 void BSMap::avalibleMoves()//shows possible moves to only those that are next to completed dungeons
