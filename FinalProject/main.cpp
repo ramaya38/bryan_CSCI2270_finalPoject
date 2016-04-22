@@ -1,7 +1,6 @@
 #include <iostream>
 #include <stdlib.h>
 #include "BSMap.h"
-#include "Creature.h"
 
 using namespace std;
 
@@ -34,8 +33,7 @@ int main()
         cout<<"1. Go to a dungeon"<<endl;
         cout<<"2. Look at map"<<endl;
         cout<<"3. Check inventory"<<endl;
-        cout<<"4. Rest over night"<<endl;
-        cout<<"5. Quit the game"<<endl;
+        cout<<"4. Quit the game"<<endl;
 
         getline(cin,response);
         choice=atoi(response.c_str());
@@ -52,9 +50,6 @@ int main()
                 //check inventory
                 break;
             case 4:
-                //heal character and reset dungeons
-                break;
-            case 5:
                 start=false;
                 cout<<"Game has been turned off! Restart program to play again!"<<endl;
                 break;

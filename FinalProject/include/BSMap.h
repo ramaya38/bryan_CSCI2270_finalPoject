@@ -16,24 +16,50 @@ struct Dungeon
     std::string descrip;
     int key;
     levels *start=NULL;
+    Dungeon *parent;
+    Dungeon *left;
+    Dungeon *right;
+};
+
+struct item
+{
+    std::string name;//name or weapon or armor
+    std::string type;//type or equipment eg: weapon affects damage... armor affects defense.. necklace affects HP
+    int stat;//the number it affects by
+};
+struct monster
+{
+    int hp;// health
+    int att;// damage
+    int def;//defence
+    std::string weakness;//stat weakness
+
+    item weapon;// info of weapon equip
+    item armor;//info on armor
+    item amulet;//info on amulet
 };
 
 class BSMap
 {
     public:
         void createMap();
+        void insertDungeon(Dungeon *root,int spot,std::string name,std::string descip);
         void printMap();
         void avalibleMoves();
-        std::string dungeonInfo();
+        void dungeonMenu();
+        monster charRandomizer();//randomly makes the character
+        monster monRandomizer();//randomly makes monsters
+        void monInfo();
+        void charInfo();
         BSMap();
         virtual ~BSMap();
     protected:
     private:
+        void printMap(Dungeon *temp);
         void setDungeonLevels(bool x,int m,Dungeon *hold);
         void combat();
         void levelDelete(Dungeon *hold);
         Dungeon *root=NULL;
-
 };
 
 #endif // BSMAP_H

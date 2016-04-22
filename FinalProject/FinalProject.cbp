@@ -35,10 +35,8 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="include/BSMap.h" />
-		<Unit filename="include/Creature.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/BSMap.cpp" />
-		<Unit filename="src/Creature.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />
