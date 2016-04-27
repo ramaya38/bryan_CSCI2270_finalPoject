@@ -10,7 +10,7 @@ int main()
     string response="";
     int choice=0;
     cout<<"You begin your quest for fame and fortune!"<<endl;
-    cout<<"You heard rumor of treasure and glory to be had in the elemental dungeons"<<endl;
+    cout<<"You heard rumor of treasure and glory to be had in the dungeons"<<endl;
     cout<<"You grab the gear your family owns and set out"<<endl;
     cout<<"=============================================="<<endl;
     cout<<"begin a new adventure? hit 1"<<endl;
@@ -44,7 +44,16 @@ int main()
                 start=false;
                 cout<<"Game has been turned off! Restart program to play again!"<<endl;
                 break;
+            default:
+                cout<<"Not a valid selection! Please enter a number from the list provided"<<endl;
+                break;
         }
+         if(world->player->hp<=0)
+         {
+            start=false;
+            cout<<"You have died! Game Over"<<endl;
+         }
+
     }
     return 0;
 }

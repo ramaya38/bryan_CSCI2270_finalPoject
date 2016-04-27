@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1461736141 source:/home/user/Dropbox/Projects/FinalProjectVM/main.cpp
+	<iostream>
+	<stdlib.h>
+	"BSMap.h"
+
+1461736156 /home/user/Dropbox/Projects/FinalProjectVM/include/BSMap.h
+	<iostream>
+	<vector>
+
+1461736236 source:/home/user/Dropbox/Projects/FinalProjectVM/src/BSMap.cpp
+	"BSMap.h"
+	<iostream>
+	<sstream>
+	<fstream>
+	<stdlib.h>
+	<vector>
+
